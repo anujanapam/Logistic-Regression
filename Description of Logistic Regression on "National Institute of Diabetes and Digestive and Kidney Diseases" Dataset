@@ -1,0 +1,36 @@
+# BUSINESS ANALYTICS APPLICATION: 
+To predict if a customer will churn, fraud, take loan, have some disease or not – logistic regression is used. The insurance companies (health insurance) fix their 
+policies using this method. They predict the probable lifespan and expenses of a person and set premiums accordingly. Risk Premiums can be set using this tool. 
+Banks also detect who will fraud and who will take loans using this technique.
+
+## DATA: 
+The data was collected and made available by “National Institute of Diabetes and Digestive and Kidney Diseases” as part of the Pima Indians Diabetes Database. 
+Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here belong to the Pima Indian 
+heritage (subgroup of Native Americans), and are females of ages 21 and above.
+
+### DESCRIPTION: 
+Logistic Regression is a widely used supervised Machine Learning classification Technique. It is the complement of Linear Regression. We predict the 
+dependent variable. But, if the dependent variable is categorical, the Linear Regression technique does not work. Logistic regression predicts the outcome 
+variable when it is categorical. Generally, the dependent variable has 2 categories- 0 or 1/ Yes or No. The goal is to find out the independent variables that 
+can correctly predicts the binary outcome variable. Here, we use a function of Y called the logit.
+We take ln(odds) to make independent variable part linear. Odds can take any non-negative value and logit can take any value from -infinity to +infinity.
+
+#### RESULTS & DISCUSSION: 
+For the Jupiter Notebook, we install all relevant packages and then import the dataset. Then we split the dataset into training and validation data. 
+The 40% of data are training data and we allow the software to do it randomly. We take outcome as dependent variable and others as independent variable. 
+Then we generate our full model. The intercept term and the coefficients for Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI, 
+Diabetes Pedigree Function and Age are printed. For example, if BMI increases by one unit then the probability of getting diabetes increases by 0.11 unit. 
+Other variables can be explained by this way. We have also printed the AIC score.
+Then, we have computed the probabilities.
+For evaluation of performance, Confusion Matrix and Gains Chart are useful. For training data, the accuracy is 78%. For validation data, it has fallen 
+very slightly. Hence, we can say that there is no overfitting problem. The model has correctly classified no diabetes cases in most of the cases. But,
+we are interested in people with diabetes. In this case, the model has rightly classified 59 cases and wrongly classified 50 cases. This is the main 
+problem with these algorithms.
+For the Gains & Lift Chart, we sort the data as per the probability belonging to category 1. For the first 10% of the observations, logistic regression 
+can predict 2.6% more accurately the diabetes case than the general model. This is the benefit of Logistic regression over other models. For the next 10%, 
+it is 2.1 %. Overall, the model’s predictive accuracy is very high.
+
+##### IMPLICATION & RECOMMENDATION: 
+It is a very widely used technique. The main problem with this model is, there may be such a situation that, in validation data, the number of wrongly 
+predicted cases is high. The algorithms need to be improved.
+If the dependent variable has 3 or more categories, then this ML technique can not be used.
